@@ -1,0 +1,143 @@
+:root {
+    --accent: #fa6c0b;
+    --background: #212121;
+    --banner-width: 300px;
+}
+/* resets */
+html, body, p, ul, li {
+    padding:0;
+    margin:0;
+}
+li {
+    list-style:none;
+}
+html, body {
+    height:100%;
+}
+body {
+    font-family: sans-serif; 'Droid Sans', sans-serif;
+    font-family: 'Droid Sans', sans-serif;
+    color:#fff;
+    background-color:var(--background);
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* background images set in media queries */
+}
+.banner {
+    float:left;
+    margin-left:120px;
+    background-color:var(--background);
+    width:var(--banner-width);
+    min-height:100%;
+}
+.tag-line {
+    padding:120px 0 0 20px;
+    float:left;
+}
+header {
+    background-color:var(--accent);
+    height:var(--banner-width);
+    position:relative;
+}
+.logo {
+    display:block;
+    margin: 0 auto;
+    position:relative;
+    top:50%;
+    transform:translateY(-50%);
+}
+h1 {
+    text-align:center;
+    font-size:24pt;
+    color:var(--background);
+    position:absolute;
+    bottom:0;
+    width:100%;
+    margin:0;
+    line-height:60px;
+}
+h1 em {
+    font-style:normal;
+    color:#fff;
+}
+section {
+    padding:12px 20px;
+    text-align:center;
+}
+hr {
+    border-style:solid;
+    color:#fff;
+    border-width:4px;
+}
+h2, h3 {
+    margin:0;
+    text-transform:uppercase;
+    text-shadow: 0 0 15px #5d5d5d;
+}
+h2 {
+    color:#fff;
+    font-size:36pt;
+}
+h3 {
+    color:var(--accent);
+    font-size:48pt;
+}
+nav a {
+    font-size:16pt;
+    text-decoration:none;
+    font-weight:bold;
+    color:#aaa;
+    text-transform:uppercase;
+    display:inline-block;
+    padding:12px;
+    letter-spacing:2px;
+    transition:color linear 200ms;
+}
+nav li:first-child a {
+    margin-top:24px;
+}
+nav a:hover {
+    color:#fff;
+}
+a {
+    color: var(--accent);
+    text-decoration:none;
+    font-weight:bold;
+}
+p {
+    margin:5px 0;
+}
+.next-event {
+    margin-top:24px;
+}
+@media (min-width: 1300px) { /* larger than 1300px */
+    body {
+        background-image:url("../img/background_large.jpg");
+    }
+}
+@media (min-width: 400px) and (max-width:1300px) { /* small desktop / tablet */
+    body {
+        background-image:url("../img/background_medium.jpg");
+    }
+}
+@media (max-width:865px) {
+    .tag-line {
+        display:none;
+    }
+}
+@media (max-width: 580px) { /* mobile */
+    :root {
+        --banner-width:200px;
+    }
+    h1 {
+        color:var(--accent);
+    }
+    .banner {
+        margin-left:0;
+        width:100%;
+    }
+    body {
+        background-image:none;
+    }
+}
+
